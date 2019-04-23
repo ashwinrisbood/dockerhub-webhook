@@ -1,13 +1,13 @@
 {
 "kind": "Deployment",
   "spec": {
-    "replicas": 1,
+    "replicas": 3,
     "template": {
       "spec": {
         "containers": [
           {
-            "image": "ashwinrisbood/marqdown:v1",
-            "name": "v1",
+            "image": "ashwinrisbood/marqdown:blue",
+            "name": "blue",
             "ports": [
               {
                 "containerPort": 3300
@@ -18,21 +18,21 @@
       },
       "metadata": {
         "labels": {
-          "app": "v1"
+          "app": "blue"
         }
       }
     },
     "selector": {
       "matchLabels": {
-        "app": "v1"
+        "app": "blue"
       }
     }
   },
   "apiVersion": "apps/v1",
   "metadata": {
     "labels": {
-      "app": "v1"
+      "app": "blue"
     },
-    "name": "v1"
+    "name": "blue"
   }
 }

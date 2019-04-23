@@ -1,0 +1,7 @@
+{
+    "apps" : [{
+      "name"        : "pm2 service",
+      "script"      : "./index.js",
+      "args"        : "start 3002"
+    }]
+}
