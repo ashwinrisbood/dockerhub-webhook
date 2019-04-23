@@ -1,0 +1,38 @@
+{
+"kind": "Deployment",
+  "spec": {
+    "replicas": 1,
+    "template": {
+      "spec": {
+        "containers": [
+          {
+            "image": "ashwinrisbood/marqdown:v1",
+            "name": "v1",
+            "ports": [
+              {
+                "containerPort": 3300
+              }
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "labels": {
+          "app": "v1"
+        }
+      }
+    },
+    "selector": {
+      "matchLabels": {
+        "app": "v1"
+      }
+    }
+  },
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "labels": {
+      "app": "v1"
+    },
+    "name": "v1"
+  }
+}
